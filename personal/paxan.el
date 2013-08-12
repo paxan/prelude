@@ -23,9 +23,10 @@
 ;; At work I sometimes use a frame that's 166 characters wide.  When I
 ;; do that, I find that many windows split horizontally -- for
 ;; example, if I have a single window, displaying a buffer of source
-;; code, typing C-x v d will split that window so that the new
-;; vc-dir window is to the right.  I hate that.  I want that new
-;; window to be below my source, not next to it.
+;; code, typing C-x v d will split that window so that the new vc-dir
+;; window is to the right.  I hate that.  I want that new window to be
+;; below my source, not next to it.
+;;
 ;; So this makes that not happen.
 (setq split-width-threshold 500)
 
