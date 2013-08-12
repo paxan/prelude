@@ -9,9 +9,10 @@
   (global-set-key (kbd "M-RET") 'toggle-frame-fullscreen))
 
 
+;; GUI goodies
+(load-theme 'manoj-dark)
 (when window-system
-  (set-frame-font "Monaco-15" t)
-  (load-theme 'manoj-dark))
+  (set-frame-font "Monaco-15" t))
 
 
 ;; This tells various "git" commands not to pipe their output through
