@@ -2,6 +2,10 @@
  '())
 
 
+;; I ain't guru, OK?
+(setq prelude-guru nil)
+
+
 ;; Un-fuck-up Meta and Super keys on OSX and enable fullscreen
 ;; toggling via M-Enter.
 (when (and (eq system-type 'darwin) window-system)
