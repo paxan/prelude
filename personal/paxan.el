@@ -1,5 +1,6 @@
 (prelude-ensure-module-deps
- '())
+ '(nrepl
+   rainbow-delimiters))
 
 
 ;; http://milkbox.net/note/single-file-master-emacs-configuration/
@@ -32,6 +33,22 @@
         js-mode-hook
         python-mode-hook
         ruby-mode-hook))
+
+
+;; Rainbow!
+(after "rainbow-delimiters-autoloads"
+  (setq-default frame-background-mode 'dark)
+  (let ((hooks '(emacs-lisp-mode-hook
+                 clojure-mode-hook
+                 js-mode
+                 lisp-mode-hook
+                 python-mode-hook
+                 ruby-mode-hook)))
+    (dolist (hook hooks)
+      (add-hook hook 'rainbow-delimiters-mode-enable)))
+
+  (after 'nrepl
+    (add-hook 'nrepl-mode-hook 'rainbow-delimiters-mode-enable)))
 
 
 ;; GUI goodies
