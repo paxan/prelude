@@ -60,7 +60,8 @@
 ;; GUI goodies
 (load-theme 'manoj-dark)
 (when window-system
-  (set-frame-font "Monaco-15" t))
+  (set-frame-font "Monaco-15" t)
+  (scroll-bar-mode -1))
 
 
 ;; This tells various "git" commands not to pipe their output through
