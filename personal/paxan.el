@@ -51,6 +51,12 @@
     (add-hook 'nrepl-mode-hook 'rainbow-delimiters-mode-enable)))
 
 
+;; flycheck
+(after 'flycheck
+  (set-face-attribute 'flycheck-error nil :underline "red")
+  (set-face-attribute 'flycheck-warning nil :underline "yellow"))
+
+
 ;; GUI goodies
 (load-theme 'manoj-dark)
 (when window-system
