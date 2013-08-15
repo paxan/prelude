@@ -21,6 +21,19 @@
   (global-set-key (kbd "M-RET") 'toggle-frame-fullscreen))
 
 
+;; Highlights trailing whitespace in modes of my choice!
+(mapc (lambda (hooksym)
+        (add-hook hooksym
+                  (lambda ()
+                    (setq show-trailing-whitespace t))))
+      '(clojure-mode-hook
+        lisp-mode-hook
+        java-mode-hook
+        js-mode-hook
+        python-mode-hook
+        ruby-mode-hook))
+
+
 ;; GUI goodies
 (load-theme 'manoj-dark)
 (when window-system
