@@ -34,6 +34,13 @@
         python-mode-hook
         ruby-mode-hook))
 
+;; Don't highlight Tabs in modes where Tabs are normal
+(mapc (lambda (hooksym)
+        (add-hook hooksym
+                  (lambda ()
+                    (setq whitespace-style (remq 'tabs whitespace-style)))))
+      '(go-mode-hook))
+
 
 ;; Rainbow!
 (after "rainbow-delimiters-autoloads"
