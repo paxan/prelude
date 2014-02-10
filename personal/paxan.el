@@ -15,10 +15,8 @@
 (setq prelude-guru nil)
 
 
-;; Un-fuck-up Meta and Super keys on OSX and enable fullscreen
-;; toggling via M-Enter.
+;; Enable fullscreen toggling via M-Enter.
 (when (and (eq system-type 'darwin) window-system)
-  (prelude-swap-meta-and-super)
   (global-set-key (kbd "M-RET") 'toggle-frame-fullscreen))
 
 
