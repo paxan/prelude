@@ -1,5 +1,5 @@
 (prelude-ensure-module-deps
- '(nrepl
+ '(cider
    rainbow-delimiters))
 
 
@@ -51,8 +51,8 @@
     (dolist (hook hooks)
       (add-hook hook 'rainbow-delimiters-mode-enable)))
 
-  (after 'nrepl
-    (add-hook 'nrepl-mode-hook 'rainbow-delimiters-mode-enable)))
+  (after 'cider
+    (add-hook 'cider-mode-hook 'rainbow-delimiters-mode-enable)))
 
 
 ;; flycheck
