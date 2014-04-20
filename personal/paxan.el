@@ -48,7 +48,7 @@
             (message "GOPATH set to the project dir: %s"
                      (setenv "GOPATH"
                              (expand-file-name
-                              (directory-file-name project-switched))))))
+                              (directory-file-name (projectile-project-root)))))))
 
 ;; Rainbow!
 (after "rainbow-delimiters-autoloads"
