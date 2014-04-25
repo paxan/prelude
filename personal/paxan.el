@@ -99,6 +99,9 @@
 (global-auto-revert-mode t)
 
 
+;; Use company-mode in all buffers
+(add-hook 'after-init-hook 'global-company-mode)
+
 ;; Javascript
 (after 'js
   (setq js-indent-level 2)
