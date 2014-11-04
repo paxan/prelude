@@ -32,6 +32,11 @@
         python-mode-hook
         ruby-mode-hook))
 
+;; Python preferences
+(add-hook 'python-mode-hook
+          (lambda ()
+            (setq whitespace-style (delq 'lines-tail whitespace-style))))
+
 ;; Clojure preferences
 (add-hook 'clojure-mode-hook
           (lambda ()
