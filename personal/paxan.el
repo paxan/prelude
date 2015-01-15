@@ -43,17 +43,16 @@
             (setq whitespace-style (delq 'lines-tail whitespace-style))))
 
 ;; Go preferences
-(add-hook 'go-mode-hook
-          (lambda ()
-            (setq whitespace-style '(face empty trailing))
-            (setq tab-width 4)))
-(add-hook 'go-mode-hook 'projectile-on)
 (add-hook 'projectile-switch-project-hook
           (lambda ()
             (message "GOPATH set to the project dir: %s"
                      (setenv "GOPATH"
                              (expand-file-name
                               (directory-file-name (projectile-project-root)))))))
+(add-hook 'go-mode-hook
+          (lambda ()
+            (setq whitespace-style '(face empty trailing)
+                  tab-width 4)))
 
 ;; Rainbow!
 (after "rainbow-delimiters-autoloads"
